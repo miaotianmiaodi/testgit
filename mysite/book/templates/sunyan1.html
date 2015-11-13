@@ -1,0 +1,31 @@
+﻿<html>
+<table border=1 align="center">
+<div align="center"><h1>图书管理系统</h1></div>
+<div align="center"><a href="/save_book/">添加书籍</a></div>
+<form action="/search/" method="post">
+{% csrf_token %}  
+<b>输入作者姓名：</b>
+<input name="search"  type="text"><input type="submit" value="搜索">
+</form>
+
+<tr>
+  <th>书名</th>
+ </tr>
+  {% for book in book_list %}
+  <tr>
+	  <td><a href="/look/?id={{ book.Title }}">{{ book.Title }}</a></td>
+	  <td><a href="/delete/?id={{book.Title}}">删除</a><td/>
+  </tr> 
+{% endfor %}
+</table>
+<table border=1 align="center">
+<tr>
+  <th>作者</th>
+ </tr>
+  {% for author in author_list %}
+  <tr>
+	  <td>{{ author.Name }}</td>
+  </tr> 
+{% endfor %}
+</table>
+</html>

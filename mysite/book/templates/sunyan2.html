@@ -1,0 +1,29 @@
+﻿<html>
+<table border=1 align="center">
+<div align="center"><h1>图书管理系统</h1></div>
+<div align="center"><a href="/search/">返回</a></div>
+<tr>
+  <th>书名</th><th>作者ID</th><th>ISBN</th><th>出版人</th><th>出版日期</th><th>价格</th>
+ </tr>
+  <tr>
+	  <td>{{ book.Title }}</td>
+	  <td>{{ book.AuthorID }}</td>
+	  <td>{{ book.ISBN }}</td>
+	  <td>{{ book.Publisher }}</td>
+	  <td>{{ book.PublishDate }}</td>
+	  <td>{{ book.Price }}</td>	
+	  <td><a href="/updata/?id={{book.Title}}">修改</a><td/>
+  </tr> 
+</table>
+<table border=1 align="center">
+<tr>
+  <th>作者ID</th><th>作者年龄</th><th>作者</th><th>作者国家</th>
+ </tr>
+ <tr>
+          <td>{{ author.AuthorID }}</td> 	
+          <td>{{ author.Age }}</td> 
+          <td>{{ author.Name }}</td>   
+          <td>{{ author.Country }}</td> 
+ </tr> 
+</table>
+</html>

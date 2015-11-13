@@ -1,0 +1,20 @@
+﻿<div align="center"><a href="/save_author/">添加作者</a></div>
+<div align="center"><a href="/search/">返回</a></div>
+<form method="post">
+{% csrf_token %} 
+<table border=1 align="center">
+ <tr>
+    <th>书名</th><th>作者ID</th><th>ISBN</th><th>出版人</th><th>出版日期</th><th>价格</th>
+ </tr>
+ <tr>
+  <td><input name="Title" type="text"></td>
+  <td><input name="AuthorID" type="text"></td>
+  <td><input name="ISBN" type="text"></td>
+  <td><input name="Publisher" type="text"></td>
+  <td><input name="PublishDate" type="text"></td>
+  <td><input name="Price" type="text"></td>  
+  <td><input type="submit" value="保存"> <input type="reset" value="重填"></td>
+ </tr>
+
+</table>
+</form>
